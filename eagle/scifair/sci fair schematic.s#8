@@ -555,22 +555,20 @@ Source: &lt;a href="http://www.farnell.com/datasheets/391098.pdf"&gt; Data sheet
 </class>
 </classes>
 <parts>
-<part name="Q1" library="semicon-smd-ipc" deviceset="NPN-TRANSISTOR_" device="SOT23" value="Diodes Inc BC817-16W"/>
-<part name="Q2" library="semicon-smd-ipc" deviceset="NPN-TRANSISTOR_" device="SOT23" value="Diodes Inc BC817-16W"/>
-<part name="X2" library="con-yamaichi" deviceset="USB-A003" device="" value="USB Left"/>
+<part name="Q1" library="semicon-smd-ipc" deviceset="NPN-TRANSISTOR_" device="SOT23" value="BC817-16W"/>
+<part name="Q2" library="semicon-smd-ipc" deviceset="NPN-TRANSISTOR_" device="SOT23" value="BC817-16W"/>
+<part name="X2" library="con-yamaichi" deviceset="USB-A003" device="" value="LEFT"/>
 <part name="SG2" library="buzzer" deviceset="F/QMX" device=""/>
-<part name="X1" library="con-yamaichi" deviceset="USB-A003" device="" value="USB Right"/>
-<part name="X3" library="con-yamaichi" deviceset="USB-A003" device="" value="USB Power"/>
+<part name="X1" library="con-yamaichi" deviceset="USB-A003" device="" value="RIGHT"/>
+<part name="X3" library="con-yamaichi" deviceset="USB-A003" device="" value="PWR"/>
 <part name="Q3" library="transistor-npn" deviceset="2N2222*" device=""/>
 <part name="LED3" library="led" deviceset="TLLY4400" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="-5.08" y="35.56" size="1.778" layer="91">1 - GND for 9V battery
-2 - +9V
-3 - +3V
-4 - GND for 3V battery</text>
+<text x="30.48" y="-2.54" size="1.778" layer="91">It would be ideal to incorporate a 555 chip to act as a time-delay</text>
+<text x="0" y="50.8" size="1.778" layer="91">power is +9v</text>
 </plain>
 <instances>
 <instance part="Q1" gate="G$1" x="63.5" y="30.48"/>
@@ -612,9 +610,44 @@ Source: &lt;a href="http://www.farnell.com/datasheets/391098.pdf"&gt; Data sheet
 <wire x1="40.64" y1="60.96" x2="48.26" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$4" class="0">
+<net name="N$6" class="0">
 <segment>
-<wire x1="27.94" y1="55.88" x2="27.94" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="Q3" gate="G$1" pin="E"/>
+<pinref part="SG2" gate="G$1" pin="1"/>
+<wire x1="96.52" y1="35.56" x2="101.6" y2="35.56" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="SG2" gate="G$1" pin="2"/>
+<wire x1="109.22" y1="35.56" x2="109.22" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="33.02" x2="96.52" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="33.02" x2="96.52" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="2.54" x2="30.48" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="2.54" x2="30.48" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="Q2" gate="G$1" pin="E"/>
+<wire x1="66.04" y1="12.7" x2="66.04" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="27.94" x2="109.22" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="10.16" x2="109.22" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="10.16" x2="25.4" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="10.16" x2="25.4" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="X3" gate="G$1" pin="4"/>
+<wire x1="25.4" y1="58.42" x2="22.86" y2="58.42" width="0.1524" layer="91"/>
+<junction x="66.04" y="10.16"/>
+<pinref part="LED3" gate="G$1" pin="C"/>
+<wire x1="86.36" y1="27.94" x2="109.22" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="58.42" x2="25.4" y2="58.42" width="0.1524" layer="91"/>
+<junction x="25.4" y="58.42"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="Q3" gate="G$1" pin="C"/>
+<wire x1="96.52" y1="45.72" x2="96.52" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="68.58" x2="35.56" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="68.58" x2="35.56" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="55.88" x2="27.94" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="53.34" x2="27.94" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="35.56" x2="66.04" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="X3" gate="G$1" pin="3"/>
 <wire x1="22.86" y1="55.88" x2="27.94" y2="55.88" width="0.1524" layer="91"/>
@@ -639,50 +672,8 @@ Source: &lt;a href="http://www.farnell.com/datasheets/391098.pdf"&gt; Data sheet
 <wire x1="88.9" y1="40.64" x2="91.44" y2="40.64" width="0.1524" layer="91"/>
 <junction x="78.74" y="35.56"/>
 <junction x="66.04" y="35.56"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="Q2" gate="G$1" pin="E"/>
-<wire x1="66.04" y1="12.7" x2="66.04" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="27.94" x2="109.22" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="10.16" x2="109.22" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="10.16" x2="25.4" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="10.16" x2="25.4" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="X3" gate="G$1" pin="4"/>
-<wire x1="25.4" y1="58.42" x2="22.86" y2="58.42" width="0.1524" layer="91"/>
-<junction x="66.04" y="10.16"/>
-<pinref part="LED3" gate="G$1" pin="C"/>
-<wire x1="86.36" y1="27.94" x2="109.22" y2="27.94" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="Q3" gate="G$1" pin="E"/>
-<pinref part="SG2" gate="G$1" pin="1"/>
-<wire x1="96.52" y1="35.56" x2="101.6" y2="35.56" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="SG2" gate="G$1" pin="2"/>
-<wire x1="109.22" y1="35.56" x2="109.22" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="33.02" x2="96.52" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="96.52" y1="33.02" x2="96.52" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="96.52" y1="2.54" x2="30.48" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="2.54" x2="30.48" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="X3" gate="G$1" pin="1"/>
-<wire x1="30.48" y1="50.8" x2="22.86" y2="50.8" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="Q3" gate="G$1" pin="C"/>
-<wire x1="96.52" y1="45.72" x2="96.52" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="96.52" y1="68.58" x2="35.56" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="68.58" x2="35.56" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="X3" gate="G$1" pin="2"/>
-<wire x1="35.56" y1="53.34" x2="22.86" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="53.34" x2="27.94" y2="53.34" width="0.1524" layer="91"/>
+<junction x="27.94" y="53.34"/>
 </segment>
 </net>
 </nets>
@@ -690,10 +681,4 @@ Source: &lt;a href="http://www.farnell.com/datasheets/391098.pdf"&gt; Data sheet
 </sheets>
 </schematic>
 </drawing>
-<compatibility>
-<note version="6.3" minversion="6.2.2" severity="warning">
-Since Version 6.2.2 text objects can contain more than one line,
-which will not be processed correctly with this version.
-</note>
-</compatibility>
 </eagle>

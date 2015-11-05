@@ -555,12 +555,12 @@ Source: &lt;a href="http://www.farnell.com/datasheets/391098.pdf"&gt; Data sheet
 </class>
 </classes>
 <parts>
-<part name="Q1" library="semicon-smd-ipc" deviceset="NPN-TRANSISTOR_" device="SOT23"/>
-<part name="Q2" library="semicon-smd-ipc" deviceset="NPN-TRANSISTOR_" device="SOT23"/>
-<part name="X2" library="con-yamaichi" deviceset="USB-A003" device=""/>
+<part name="Q1" library="semicon-smd-ipc" deviceset="NPN-TRANSISTOR_" device="SOT23" value="BC817-16W"/>
+<part name="Q2" library="semicon-smd-ipc" deviceset="NPN-TRANSISTOR_" device="SOT23" value="BC817-16W"/>
+<part name="X2" library="con-yamaichi" deviceset="USB-A003" device="" value="LEFT"/>
 <part name="SG2" library="buzzer" deviceset="F/QMX" device=""/>
-<part name="X1" library="con-yamaichi" deviceset="USB-A003" device=""/>
-<part name="X3" library="con-yamaichi" deviceset="USB-A003" device=""/>
+<part name="X1" library="con-yamaichi" deviceset="USB-A003" device="" value="RIGHT"/>
+<part name="X3" library="con-yamaichi" deviceset="USB-A003" device="" value="PWR"/>
 <part name="Q3" library="transistor-npn" deviceset="2N2222*" device=""/>
 <part name="LED3" library="led" deviceset="TLLY4400" device=""/>
 </parts>
@@ -638,6 +638,7 @@ Source: &lt;a href="http://www.farnell.com/datasheets/391098.pdf"&gt; Data sheet
 <pinref part="Q3" gate="G$1" pin="B"/>
 <wire x1="88.9" y1="40.64" x2="91.44" y2="40.64" width="0.1524" layer="91"/>
 <junction x="78.74" y="35.56"/>
+<junction x="66.04" y="35.56"/>
 </segment>
 </net>
 <net name="N$5" class="0">
