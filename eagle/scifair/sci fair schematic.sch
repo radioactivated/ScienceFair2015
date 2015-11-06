@@ -6973,9 +6973,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <sheets>
 <sheet>
 <plain>
-<text x="30.48" y="-2.54" size="1.778" layer="91">It would be ideal to incorporate a 555 chip to act as a time-delay</text>
 <text x="96.52" y="106.68" size="1.778" layer="91">100uf</text>
 <text x="134.62" y="60.96" size="1.778" layer="91">47K ohms</text>
+<text x="17.78" y="45.72" size="1.778" layer="91" rot="R90">These bits here are a stand-in for SparkFun usb breakout boards
+also the hand contact things</text>
 </plain>
 <instances>
 <instance part="Q1" gate="G$1" x="83.82" y="73.66"/>
@@ -7161,9 +7162,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <junction x="35.56" y="104.14"/>
 <junction x="27.94" y="83.82"/>
 <pinref part="SUPPLY1" gate="G$1" pin="VCC"/>
-<wire x1="22.86" y1="91.44" x2="25.4" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="88.9" x2="35.56" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="88.9" x2="50.8" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="91.44" x2="33.02" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="91.44" x2="50.8" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="F1" gate="G$1" pin="1"/>
 <wire x1="22.86" y1="91.44" x2="22.86" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="73.66" x2="35.56" y2="73.66" width="0.1524" layer="91"/>
@@ -7177,4 +7177,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>

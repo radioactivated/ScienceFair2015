@@ -7100,21 +7100,21 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <net name="N$1" class="0">
 <segment>
 <pinref part="X3" gate="G$1" pin="3"/>
-<wire x1="22.86" y1="55.88" x2="25.4" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="55.88" x2="25.4" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="55.88" x2="27.94" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="55.88" x2="27.94" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="X1" gate="G$1" pin="4"/>
-<wire x1="25.4" y1="68.58" x2="22.86" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="68.58" x2="25.4" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="66.04" x2="22.86" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="66.04" x2="27.94" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="X2" gate="G$1" pin="4"/>
-<wire x1="25.4" y1="86.36" x2="22.86" y2="88.9" width="0.1524" layer="91"/>
-<junction x="25.4" y="68.58"/>
-<wire x1="25.4" y1="86.36" x2="25.4" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="104.14" x2="35.56" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="83.82" x2="22.86" y2="88.9" width="0.1524" layer="91"/>
+<junction x="27.94" y="66.04"/>
+<wire x1="27.94" y1="83.82" x2="27.94" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="104.14" x2="35.56" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="A" pin="VI"/>
 <pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="104.14" x2="38.1" y2="104.14" width="0.1524" layer="91"/>
 <junction x="35.56" y="104.14"/>
-<junction x="25.4" y="86.36"/>
+<junction x="27.94" y="83.82"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -7141,7 +7141,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="86.36" y1="68.58" x2="86.36" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$5" class="0">
+<net name="GND" class="0">
 <segment>
 <pinref part="X3" gate="G$1" pin="4"/>
 <wire x1="48.26" y1="43.18" x2="38.1" y2="43.18" width="0.1524" layer="91"/>
